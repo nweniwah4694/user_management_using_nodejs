@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	  <meta charset="UTF-8">
+	  <title>USER MANAGEMENT</title>
+	  <link rel="stylesheet" href="styles.css">
+	</head>
+	<body>  
+		<div class="container">
+			<div class="title">User Registeration Form</div>
+		 	<% if( errors.length > 0) {%>
+		 		<div class="error-list">
+			      	<% for(var i=0; i<errors.length; i++) {%>			      	
+					    <span class="error"><%= errors[i].msg %></span>			     	
+			    	<% } %>
+		    	</div>
+		    <% } %>
+			<form action="/createUser" method="post">
+				<input type="hidden" id="skill-list" value="">
+				<input type="hidden" id="tage_list" name="tage_list" value="">
+				<div>
+					<span>First Name</span>
+					<input type="text" name="first_name" placeholder="First Name">
+				</div>
+				<div>
+					<span>Last Name</span>
+					<input type="text" name="last_name" placeholder="Last Name">
+				</div>
+				<div>
+					<span>Password</span>
+					<input type="password" name="password" placeholder="Password">
+				</div>
+				<div>
+					<span>Email</span>
+					<input type="text" name="email" placeholder="Email">
+				</div>
+				<div>
+					<span>Phone Number</span>
+					<input type="text" name="phone" placeholder="Phone Number">
+				</div>
+				<div>
+					<span>Gender</span>
+					<div class="gender">
+						<input type="radio" name="gender" value="male">Male
+						<input type="radio" name="gender" value="female">Female
+					</div>
+				</div>
+				<div class="isAdmin">
+					<input type="checkbox" name="isAdmin" value="on" checked>isAdmin
+				</div>	
+				<div class="tag-list">
+					<button type="button" id="add-skill">Add Skill</button>
+					<input type="text" id="skill" placeholder="Skill">
+					<div id="skill-error" class="error"></div>					
+				</div>
+				<div id="skill-group" class="skill-group">
+				</div>	
+				<button type="submit" class="user-button">Register</button>		
+			</form>
+		</div>
+		<script src="main.js"></script>
+	</body>
+</html>

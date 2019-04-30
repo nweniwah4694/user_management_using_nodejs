@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>USER MANAGEMENT</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="title">User Update Form</div>
+        <% if( errors.length > 0) {%>
+          <div class="error-list">
+            <% for(var i=0; i<errors.length; i++) {%>           
+                <span class="error"><%= errors[i].msg %></span>         
+            <% } %>
+          </div>
+        <% } %>
+      <form action="/updateUser" method="post">
+        <input type="hidden" name="id" value=<%= result._id %>> 
+        <input type="hidden" id="skill-list" value="<%= skillList %>">
+        <input type="hidden" id="tage_list" name="tage_list" value="">
+        <div>
+        <div>
+          <span>First Name</span>
+          <input type="text" name="first_name" value="<%= result.first_name %>">
+        </div>
+        <div>
+          <span>Last Name</span>
+          <input type="text" name="last_name" value="<%= result.last_name %>">
+        </div>
+        <div>
+          <span>Password</span>
+          <input type="password" name="password" value="<%= result.password %>">
+        </div>
+        <div>
+          <span>Email</span>
+          <input type="text" name="email" value="<%= result.email %>">
+        </div>
+        <div>
+          <span>Phone Number</span>
+          <input type="text" name="phone" value="<%= result.phone %>">
+        </div>
+        <div>
+          <span>Gender</span>
+          <div class="gender">
+            <% if( result.gender == "male") {%>
+              <input type="radio" name="gender" value="male" checked>Male
+              <input type="radio" name="gender" value="female">Female
+            <% } %> 
+            <% if( result.gender == "female") {%>
+              <input type="radio" name="gender" value="male">Male
+              <input type="radio" name="gender" value="female" checked>Female
+            <% } %> 
+          </div>
+        </div>
+        <div class="isAdmin">
+            <% if( result.isAdmin == "on") {%>
+              <input type="checkbox" name="isAdmin" value="on" checked >isAdmin
+            <% } %> 
+            <% if( result.isAdmin == "off") {%>
+              <input type="checkbox" name="isAdmin" value="on" >isAdmin
+            <% } %>
+        </div>        
+        <div class="tag-list">
+          <button type="button" id="add-skill">Add Skill</button>
+          <input type="text" id="skill" placeholder="Skill">
+          <div id="skill-error" class="error"></div>          
+        </div>
+        <div id="skill-group" class="skill-group">
+          <% for(var j=0; j<result.details.length; j++) {%>
+            <div id="skill_<%= result.details[j].tag_name %>" onclick="removeAt('<%= result.details[j].tag_name %>');">
+              <span>✖</span>
+              <%= result.details[j].tag_name %>              
+            </div>
+          <% } %> 
+        </div> 
+        <button type="submit" class="user-button">Update</button>        
+      </form>  
+    </div>
+    <script src="main.js"></script>  
+  </body>
+</html>

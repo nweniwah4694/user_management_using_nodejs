@@ -1,0 +1,182 @@
+html {
+  font-size: 15px;
+}
+
+button {
+	padding: 8px;
+	width: 125px;
+}
+
+table {
+  	border-collapse: collapse;
+	width: 90%;
+	display: table;
+	margin: 0 auto;
+	margin-top: 30px;
+}
+
+table td, table th {
+	border: 1px solid #ddd;
+	padding: 8px;
+}
+
+table tr:hover {
+	background-color: #ddd;
+	cursor: pointer;
+}
+
+table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #a062a0;
+  color: white;
+  text-align: center;
+}
+
+.user-button {
+	margin: 0 auto;
+	display: table;
+	background: #a062a0;
+	color: #fff;
+}
+
+.error-list {
+	padding: 30px 50px 0 50px;
+}
+
+.error-list .error {
+	text-align: left;
+	display: block;
+}
+
+.error {
+	text-align: center;
+	color: red;
+	font-size: 15px;
+	margin-top: 10px;
+}
+
+.title {
+	font-size: 22px;
+	text-align: center;
+	background: #a062a0;
+	padding: 10px;
+	color: #ffffff;
+	font-weight: bold;
+}
+
+.login {
+	width: 400px;
+	margin: 0 auto;
+	background: #eee;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 140px;
+}
+
+.login form {
+	padding: 10px 20px 20px 20px;
+}
+
+.login form input, .login form button {
+	width: 94%;
+    padding: 10px;
+    margin-top: 15px;
+}
+
+.login form button {
+	width: 100%;
+	cursor: pointer;
+}
+
+.login a {
+	display: block;
+	margin-top: 20px;
+}
+
+.container {
+	width: 900px;
+	margin: 0 auto;
+	background: #eee;
+}
+
+.container form, .users {
+ 	padding: 30px 50px 50px 50px;
+}
+
+.container form div {
+    margin-top: 20px;
+    display: inline-block;
+    width: 100%;
+}
+
+.container form div span {
+	width: 150px;
+	float: left;
+}
+
+.container form input {
+	padding: 10px;
+	width: 70%;
+}
+
+.container form .gender {
+	width: 70%;
+	float: left;
+	margin: 0;
+}
+
+.container form .gender input, .container form .isAdmin input {
+	width: auto;
+}
+
+.tag-list #add-skill {
+	width: 120px;
+	padding: 8px;
+}
+
+.tag-list #skill {
+	margin-left: 30px;
+}
+
+.tag-list #skill-error {
+	width: 74%;
+	float: right;
+	text-align: left;
+}
+
+.skill-group {
+	margin-top: 0;
+	margin-bottom: 20px;
+}
+
+.skill-group div {
+	float: left;
+	background: #a062a0;
+	padding: 5px 20px;
+	width: auto !important;
+	margin-right: 25px;
+	border-radius: 10px;   
+	position: relative;
+	color: #ffffff;
+}
+
+.skill-group div span {
+	position: absolute;
+	top: -21px;
+	left: -10px;
+	color: #000;
+}
+
+.download {
+	padding: 20px 50px 0 50px;
+	margin-bottom: 30px;
+	display: inline-block;
+}
+
+
+
+ 
+

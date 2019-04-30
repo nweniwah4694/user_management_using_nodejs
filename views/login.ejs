@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>USER MANAGEMENT</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="login">
+      <div class="title">User Login</div>
+      <% if( error != "") {%>
+        <div class="error"><%= error = error %></div>
+      <% } %>
+      <form action="/login" method="POST">
+        <input type="text" placeholder="Email" name="email">
+        <input type="password" placeholder="Password" name="password">
+        <button type="submit">LOGIN</button>
+        <a href="/createUser">Create New User</a>
+      </form>
+    </div>
+  </body>
+</html>
