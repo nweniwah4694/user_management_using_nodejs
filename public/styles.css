@@ -39,6 +39,8 @@ table th {
 	display: table;
 	background: #a062a0;
 	color: #fff;
+	float: left;
+	margin-right: 20px;
 }
 
 .error-list {
@@ -100,6 +102,7 @@ table th {
 	width: 900px;
 	margin: 0 auto;
 	background: #eee;
+	padding-bottom: 40px;
 }
 
 .container form, .users {
