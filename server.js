@@ -6,11 +6,11 @@ const bodyParser = require('body-parser');
 const PDFDocument = require('pdfkit');
 const { check, validationResult } = require('express-validator/check');
 const port = process.env.PORT || 5000;
-const mongo_uri = 'mongodb://127.0.0.1:27017';
+// const mongo_uri = 'mongodb://127.0.0.1:27017';
 
 // const mongo_uri = 'mongodb+srv://NweNiWah:262611zza$@cluster0-mmxpt.mongodb.net/test?retryWrites=true';
 
-// const mongo_uri = 'mongodb+srv://thinzar:gOuVGubZslnIMSmu@cluster0-hok0q.mongodb.net/test?retryWrites=true';
+const mongo_uri = 'mongodb+srv://thinzar:gOuVGubZslnIMSmu@cluster0-hok0q.mongodb.net/test?retryWrites=true';
 var db
 //create connecting mongoclient
 MongoClient.connect(mongo_uri, { useNewUrlParser: true })
